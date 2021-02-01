@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 (async () => {
     const browser = await puppeteer.launch({headless: false, defaultViewport: null});
     const page = await browser.newPage();
-    await page.goto('http://192.168.1.149:3000')
+    await page.goto('http://192.168.1.7:3000')
     await page.type('#inputSuccess2i', 'checker')
     await page.type('#inputWarning2i', '123456')
     await page.type('#inputWarning2i', String.fromCharCode(13));
