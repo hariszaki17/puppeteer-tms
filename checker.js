@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 (async () => {
     const browser = await puppeteer.launch({headless: false, defaultViewport: null});
     const page = await browser.newPage();
-    await page.goto('http://192.168.1.7:3000')
+    await page.goto('http://192.7.1.238:3000')
     await page.type('#inputSuccess2i', 'checker')
     await page.type('#inputWarning2i', '123456')
     await page.type('#inputWarning2i', String.fromCharCode(13));
@@ -28,7 +28,7 @@ const puppeteer = require('puppeteer');
         await page.click(`#root > div > div.c-wrapper > div > main > div > div > form > div:nth-child(2) > div > div > div > p > button.btn.btn-primary`)
         await page.waitForSelector(`#root > div > div.c-wrapper > div > main > div > div > div > div.modal.overflow-auto.fade.modal-primary.show.d-block > div > div > div > div.d-flex.flex-row.justify-content-center > p.text-success > b`)
         await page.click(`#root > div > div.c-wrapper > div > main > div > div > div > div.modal.overflow-auto.fade.modal-primary.show.d-block > div > div > footer > div > button.mr-2.btn.btn-primary`)    
-        await page.waitForTimeout(3000)
+        await page.waitForTimeout(1000)
     }
     
 })()
